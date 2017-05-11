@@ -1,6 +1,6 @@
 {
     "name": "felix33/simditor",
-    "description": "desc",
+    "description": "simditor widget",
     "license": "MIT",
     "authors": [
         {
@@ -8,7 +8,6 @@
             "email": "felix33@yeah.net"
         }
     ],
-    "minimum-stability": "stable",
     "require": {},
     "autoload": {
         "psr-4": {
