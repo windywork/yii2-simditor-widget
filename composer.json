@@ -1,0 +1,18 @@
+{
+    "name": "felix33/simditor",
+    "description": "desc",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Felix33",
+            "email": "felix33@yeah.net"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "felix33\\simditor\\": ""
+        }
+    }
+}
