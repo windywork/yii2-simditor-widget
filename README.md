@@ -79,7 +79,7 @@ public function actions()
     ];
 }
 ```
-or
+或者：
 
 ```php
 public function actions()
