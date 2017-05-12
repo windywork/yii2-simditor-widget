@@ -31,7 +31,7 @@ class Simditor extends InputWidget
             $this->id = $this->options['id'];
         } else {
             $this->id = $this->hasModel() ? Html::getInputId($this->model,
-                $this->attribute) : $this->id;
+                $this->attribute) : $this->name;
         }
         $this->_options = [
           /* 'toolbar' => [ 'title', '|', 'bold', 'italic',

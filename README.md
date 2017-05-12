@@ -37,7 +37,6 @@ echo $form->field($model,'colum')->widget('felix33\simditor\Simditor',[]);
 use \felix33\simditor\Simditor;
 echo Simditor::widget([
     'name'=> 'simditor',
-    'id'=> 'simditor',
     'value'=> '初始化内容..',
     'clientOptions' => [
       'placeHolder' => '这里输入内容...',
