@@ -18,13 +18,13 @@ to the ```require``` section of your `composer.json` file.
 
 view:  
 
-```
+```php
 echo \felix33\simditor\Simditor::widget(['name' => 'xxxx']);
 ```
 
 或者：
 
-```
+```php
 echo $form->field($model,'colum')->widget('felix33\simditor\Simditor',[]);
 ```
 
@@ -80,6 +80,7 @@ public function actions()
 }
 ```
 or
+
 ```php
 public function actions()
 {
