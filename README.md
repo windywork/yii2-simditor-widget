@@ -54,17 +54,13 @@ echo Simditor::widget([
        'defaultImage' => '/images/image.png',
        'upload' => [
           // 文件上传的接口地址
-          'url' => 'ImgUpload.action',
+          'url' => Url::toRoute(['upload']),
           // 键值对,指定文件上传接口的额外参数,上传的时候随文件一起提交
           'params' => null,
           // 服务器端获取文件数据的参数名
-          'fileKey' => 'fileDataFileName',
+          'fileKey' => 'fileData',
           'connectionCount' => 3,
           'leaveConfirm' => '正在上传文件'
-        ],
-        'devices' => [
-          ['text' => '电脑预览', 'css' => 'simditor-devices-pc.css'],
-          ['text' => '手机预览', 'css' => 'simditor-devices-mobile.css']
         ]
     ]);
 ```
