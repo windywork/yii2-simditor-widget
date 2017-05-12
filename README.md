@@ -16,19 +16,6 @@ to the ```require``` section of your `composer.json` file.
 
 ### 应用
 
-controller:  
-
-```
-public function actions()
-{
-    return [
-        'upload' => [
-            'class' => 'felix33\simditor\SimditorAction',
-        ]
-    ];
-}
-```
-
 view:  
 
 ```
@@ -49,6 +36,8 @@ echo $form->field($model,'colum')->widget('felix33\simditor\Simditor',[]);
 ```php
 use \felix33\simditor\Simditor;
 echo Simditor::widget([
+    'name'=> 'simditor',
+    'id'=> 'simditor',
     'value'=> '初始化内容..',
     'clientOptions' => [
       'placeHolder' => '这里输入内容...',
@@ -83,6 +72,19 @@ echo Simditor::widget([
 ##### 文件上传相关配置，请在`controller`中配置
 
 简单实例:  
+controller:  
+
+```php
+public function actions()
+{
+    return [
+        'upload' => [
+            'class' => 'felix33\simditor\SimditorAction'
+        ]
+    ];
+}
+```
+or
 ```php
 public function actions()
 {
@@ -90,9 +92,14 @@ public function actions()
         'upload' => [
             'class' => 'felix33\simditor\SimditorAction',
             'config' => [
-                "imageUrlPrefix"  => "http://www.baidu.com",//图片访问路径前缀
-                "imagePathFormat" => "/upload/image/{yyyy}{mm}{dd}/{time}{rand:6}" //上传保存路径
-                "imageRoot" => Yii::getAlias("@webroot"),
+                // 文件字段
+                "fileKey" => "fileData",
+                // 图片访问路径前缀
+                "urlPrefix"  => Yii::getAlias('@web'),
+                // 上传保存路径
+                "uploadRoot" => Yii::getAlias("@webroot"),
+                // 上传路径格式化
+                "pathFormat" => "/upload/{yyyy}{mm}{dd}/{time}{rand:6}"
             ],
         ]
     ];

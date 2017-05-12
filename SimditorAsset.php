@@ -10,8 +10,7 @@ class SimditorAsset extends AssetBundle
         'simditor/styles/simditor.css',
         'simditor/styles/simditor-html.css',
         'simditor/styles/simditor-fullscreen.css',
-        'simditor/styles/icons.css',
-        'simditor/styles/simditor-devices.css',
+        'simditor/styles/icons.css'
     ];
 
     public $js = [
@@ -23,8 +22,7 @@ class SimditorAsset extends AssetBundle
       'simditor/scripts/simditor.js',
       'simditor/scripts/simditor-html.js',
       'simditor/scripts/simditor-fullscreen.js',
-      'simditor/scripts/simditor-clearhtml.js',
-      'simditor/scripts/simditor-devices.js'
+      'simditor/scripts/simditor-clearhtml.js'
     ];
 
     public function init()

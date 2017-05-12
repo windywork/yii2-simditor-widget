@@ -34,12 +34,13 @@ class Simditor extends InputWidget
                 $this->attribute) : $this->id;
         }
         $this->_options = [
-          'toolbar' => [ 'title', '|', 'bold', 'italic',
+          /* 'toolbar' => [ 'title', '|', 'bold', 'italic',
              'underline', 'strikethrough', 'color', 'fontScale',
              'clearhtml', '|', 'ol', 'ul', 'blockquote', 'code',
              'table', '|', 'link', 'image', 'hr', '|', 'indent',
              'outdent', 'alignment', 'html', 'fullscreen', 'devices'
            ]
+           */
         ];
         $this->clientOptions = ArrayHelper::merge($this->_options, $this->clientOptions);
         parent::init();
@@ -62,9 +63,9 @@ class Simditor extends InputWidget
     {
         SimditorAsset::register($this->view);
         $clientOptions = Json::encode($this->clientOptions);
-        $script = " var smConfig =". $clientOptions . "; ".
-        " smConfig['textarea'] = $('#".$this->id."'); ".
-        " new window.Simditor(smConfig);";
+        $script = "(function (){ var config =". $clientOptions . "; ".
+        " config['textarea'] = $('#".$this->id."'); ".
+        " new window.Simditor(config);})();";
         $this->view->registerJs($script, View::POS_READY);
     }
 }
