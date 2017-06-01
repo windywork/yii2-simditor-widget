@@ -3,13 +3,13 @@ Yii2 Simditor
 ### 安装
 
 ```
-$ php composer.phar require felix33/yii-simditor "*"
+$ php composer.phar require felix33/yii2-simditor "*"
 ```
 
 or add
 
 ```
-"felix33/yii-simditor": "*"
+"felix33/yii2-simditor": "*"
 ```
 
 to the ```require``` section of your `composer.json` file.
